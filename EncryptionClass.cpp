@@ -116,7 +116,7 @@ private:
             indices_per_thread = data->size();
         }
         for (int i = 0; i < num_threads; i++) {
-            alg_prms * alg_prms_strc = new alg_prms();
+            alg_prms * alg_prms_strc = auto alg_prms();
             alg_prms_strc->data = this->data;
             alg_prms_strc->hash_key = this->hash_key;
             alg_prms_strc->start_index = (i * indices_per_thread);
