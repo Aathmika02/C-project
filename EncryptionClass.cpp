@@ -10,14 +10,6 @@
 
 using namespace std;
 
-/*
-namespace algorithms
-{
-    void * encryption_algorithm(void *);
-    void * decryption_algorithm(void *);
-}
-*/
-
 // Create a typecast to use the non-static virtual functions in a thread
 typedef void * (*thread_function)(void *);
 
