@@ -130,13 +130,13 @@ private:
         vector<pthread_t> encryption_threads;
         for (auto prm_vct : encryption_alg_prms_vect) {
             pthread_t new_thread;
-            pthread_create(&new_thread, NULL, decryption_algorithm, prm_vct);
+            pthread_create(&new_thread, nullptr, decryption_algorithm, prm_vct);
             encryption_threads.push_back(new_thread);
         }
 
         // Now that the threads are running, join them so the function will yield
         for (auto thread : encryption_threads) {
-            pthread_join(thread, NULL);
+            pthread_join(thread, nullptr);
         }
 
         // Delete the dynamically allocated structs once all thread operation has completed
