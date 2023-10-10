@@ -4,7 +4,7 @@
 #include<cstdio>
 #include<fstream>
 
-using namespace std;
+
 class file_error { };
 class open_error : public file_error { };
 class close_error : public file_error { };
@@ -36,5 +36,5 @@ class File
 
 	private:
 		fstream m_file_handle;
-		string filename; //name of file
+		std::string filename; //name of file
 };
