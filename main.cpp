@@ -35,7 +35,7 @@ void *readFile(void *arg)
 	if(!in)
 	{
 		cout<<"Failure to open file, try again. Spelling counts"<<endl;
-		return NULL;
+		return nullptr;
 	}
 	string word;
 	while(in>>word)
