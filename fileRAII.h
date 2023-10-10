@@ -13,7 +13,7 @@ class write_error : public file_error { };
 class File
 {
 	public:
-		File() { }
+		File() = default;
 		
 		//destructor that closes stream when done
 		//opens file with filename
