@@ -249,7 +249,7 @@ public:
                 // after the string is indexed, get its address so the string can be modified
             string * current_string = &((*(params->data))[i]);
             // At this point, we have a reference to the string that should be encrypted.
-            for (int c = 0; c < current_string->length(); c++) {
+            std::ranges::for_each(int c = 0; c < current_string->length(); c++) {
                 // Iterate through every character in the string, apply the cipher.
                 int current_char = ((int)((*current_string)[c]));
                 current_char -= cipher_offset;
