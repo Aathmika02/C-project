@@ -54,7 +54,7 @@ private:
 
         // Create structs for each thread
         for (int i = 0; i < num_threads; i++) {
-            alg_prms * alg_prms_strc = new alg_prms();
+            auto alg_prms_strc = new alg_prms();
             alg_prms_strc->data = this->data;
             alg_prms_strc->hash_key = this->hash_key;
             alg_prms_strc->start_index = (i * indices_per_thread);
