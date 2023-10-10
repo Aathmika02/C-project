@@ -16,14 +16,6 @@ class File
 		File() { }
 		
 		//destructor that closes stream when done
-		~File()
-		{
-			if(m_file_handle.is_open())
-			{
-				m_file_handle.close();
-			}
-		}
-		
 		//opens file with filename
 		void open(const string fileName);
 		
