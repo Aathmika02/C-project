@@ -28,7 +28,7 @@ struct ft
  * start_index, and end_index to read in thread in segments*/
 void *readFile(void *arg)
 {
-	int i; int c;
+	int c;
 	struct ft* fi = (struct ft*)arg;
 	string filename = fi->file.getFilename();
 	cout<<"Filename is: "<< filename<<endl;
