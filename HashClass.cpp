@@ -12,8 +12,6 @@
 
 using namespace std;
 
-//void test_function();
-
 class hashing
 {
 	private:
