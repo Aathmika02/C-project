@@ -163,11 +163,11 @@ int main(int argc, char*argv[])
 				/* 
 				Call function here to update file based on the now modified vector
 				*/
-				rc = pthread_create(&threads[0], NULL, newFile, (void*)args);
+				rc = pthread_create(&threads[0], nullptr, newFile, (void*)args);
 
 				has_encrypted_once = 1;
 
-				pthread_join(threads[0], NULL);
+				pthread_join(threads[0], nullptr);
 				
 				break;
 			case 3:
@@ -192,11 +192,11 @@ int main(int argc, char*argv[])
 
 				// Call the function necessary to overwrite the data in the file based on modifications made
 				// to the vector which contains the file contents.
-				rc = pthread_create(&threads[0], NULL, newFile, (void*)args);
+				rc = pthread_create(&threads[0], nullptr, newFile, (void*)args);
 
 				has_decrypted_once = 1;
 
-				pthread_join(threads[0], NULL);
+				pthread_join(threads[0], nullptr);
 				break;
 			case 4:
 				//exit program
