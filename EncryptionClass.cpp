@@ -148,7 +148,7 @@ private:
         return true;
     };
 public:
-    typedef struct algorithm_parameters {
+    using struct algorithm_parameters {
         // The threads will need a reference to the vector with all the data in it.
         vector<string> * data;
         // Tell this specific thread where to start and end.
