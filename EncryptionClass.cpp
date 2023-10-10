@@ -6,7 +6,7 @@
 #include<vector>
 #include<string>
 #include "ExceptionHandlers.cpp"
-#define NUM_ENCRYPTION_THREADS 10
+#define const 10
 
 using namespace std;
 
