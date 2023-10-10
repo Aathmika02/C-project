@@ -45,7 +45,7 @@ void *readFile(void *arg)
 	in.close();
 	cout<<"File was read!"<<endl;
 
-	return NULL;
+	return nullptr;
 }
 
 //newFile
