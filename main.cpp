@@ -59,7 +59,7 @@ void *newFile(void *arg)
 	ostream_iterator<string> output_iterator(file, "\n");
 	copy(fi->fileVector.begin(), fi->fileVector.end(), output_iterator);
 
-	return NULL;
+	return nullptr;
 }
 
 //Prints menu for program
@@ -131,8 +131,8 @@ int main(int argc, char*argv[])
 				cout<<"You choose to read in the file: "<<filename<<endl;
 				cout<<"If wrong then please read in again"<<endl;
 				args->file.open(filename);
-				rc = pthread_create(&threads[0], NULL, readFile, (void *)args);
-				pthread_join(threads[0], NULL);
+				rc = pthread_create(&threads[0], nullptr, readFile, (void *)args);
+				pthread_join(threads[0], nullptr);
 				break;
 			case 2: 
 				//encrypt file
