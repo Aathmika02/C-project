@@ -74,7 +74,7 @@ private:
 
         // Now that the threads are running, join them so the function will yield
         for (auto thread : encryption_threads) {
-            pthread_join(thread, NULL);
+            pthread_join(thread, nullptr);
         }
 
         // Delete the dynamically allocated structs once all thread operation has completed
