@@ -36,14 +36,6 @@ class hashing
 				hash_key = hash_obj(password);
 			}
 };
-
-/*int main(void)
-{
-	test_function();
-
-	return 0;
-}*/
-
 //	Below is a test for the above hashing class
 
 /*void test_function()
