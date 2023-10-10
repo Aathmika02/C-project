@@ -217,7 +217,7 @@ public:
             string * current_string = &((*(params->data))[i]);
             //cout << "working on string " << *current_string << endl; 
             // At this point, we have a reference to the string that should be encrypted.
-            for (int c = 0; c < current_string->length(); c++) {
+            std::ranges::for_each(int c = 0; c < current_string->length(); c++) {
                 // Iterate through every character in the string, apply the cipher.
                 //cout << "applying cipher to character" << endl;
                 int current_char = ((int)((*current_string)[c]));
