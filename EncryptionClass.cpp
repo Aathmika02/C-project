@@ -11,7 +11,7 @@
 using namespace std;
 
 // Create a typecast to use the non-static virtual functions in a thread
-typedef void * (*thread_function)(void *);
+using void * (*thread_function)(void *);
 
 // The encryption class handles all encryption and decryption of the data
 class encryption_base
