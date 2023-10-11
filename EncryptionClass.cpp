@@ -8,8 +8,6 @@
 #include "ExceptionHandlers.cpp"
 #define const 10
 
-using namespace std;
-
 // Create a typecast to use the non-static virtual functions in a thread
 using void * (*thread_function)(void *);
 
@@ -18,9 +16,9 @@ class encryption_base
 {
 private:
     // Data state has three values: 0 for data is nonexistant, 1 for encrypted data, and 2 for decrypted data
-    int data_state = 0;
-    vector<string> * data;
-    int hash_key = 0;
+    std::int data_state = 0;
+    std::vector<string> * data;
+    std::int hash_key = 0;
 
     bool encrypt_data() {
         if (this->hash_key == 0) {
@@ -37,9 +35,9 @@ private:
 
         // Set up the structs for the threads which will encrypt the data.
         vector<alg_prms *> encryption_alg_prms_vect;
-        int indices_per_thread;
-        int num_threads;
-        int end_additional_increment = 0;
+        std::int indices_per_thread;
+        std::int num_threads;
+        std::int end_additional_increment = 0;
         // Ensure there will be at least one string per thread
         if (data->size() >= NUM_ENCRYPTION_THREADS) {
             indices_per_thread = (data->size()) / NUM_ENCRYPTION_THREADS;
@@ -101,9 +99,9 @@ private:
         
         // Set up the structs for the threads which will encrypt the data.
         vector<alg_prms *> encryption_alg_prms_vect;
-        int indices_per_thread;
-        int num_threads;
-        int end_additional_increment = 0;
+        std::int indices_per_thread;
+        std::int num_threads;
+        std::int end_additional_increment = 0;
         // Ensure there will be at least one string per thread
         if (data->size() >= NUM_ENCRYPTION_THREADS) {
             indices_per_thread = (data->size()) / NUM_ENCRYPTION_THREADS;
@@ -152,9 +150,9 @@ public:
         // The threads will need a reference to the vector with all the data in it.
         vector<string> * data;
         // Tell this specific thread where to start and end.
-        int start_index;
-        int end_index;
-        int hash_key;
+        std::int start_index;
+        std::int end_index;
+        std::int hash_key;
     } alg_prms;
 
     // Give the class some data to work with, call the appropriate function so it knows if the data is encrypted
@@ -237,7 +235,7 @@ public:
         algorithm_parameters * params = static_cast<algorithm_parameters *>(params_void);
 
         // Calculate the cipher offset.
-        int cipher_offset = params->hash_key % 255;
+        std::int cipher_offset = params->hash_key % 255;
 
         // Traverse through each string this thread is responsible for.
         for (int i = params->start_index; i <= params->end_index; i++) {
@@ -251,7 +249,7 @@ public:
             // At this point, we have a reference to the string that should be encrypted.
             std::ranges::for_each(int c = 0; c < current_string->length(); c++) {
                 // Iterate through every character in the string, apply the cipher.
-                int current_char = ((int)((*current_string)[c]));
+                std::int current_char = ((int)((*current_string)[c]));
                 current_char -= cipher_offset;
                 if (current_char < 0)
                     current_char += 255;
