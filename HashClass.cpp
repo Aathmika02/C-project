@@ -10,13 +10,11 @@
 #include <functional>
 #include <string>
 
-using namespace std;
-
 class hashing
 {
 	private:
-			int hash_key = 0;
-			string password;
+			std::int hash_key = 0;
+			std::string password;
 			
 	public:
 			void set_password(std::string_view entered_password)
