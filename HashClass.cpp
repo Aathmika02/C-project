@@ -19,7 +19,7 @@ class hashing
 			string password;
 			
 	public:
-			void set_password(string entered_password)
+			void set_password(const string& entered_password)
 			{
 				password = entered_password;
 			}
