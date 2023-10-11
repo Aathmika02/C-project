@@ -26,7 +26,7 @@ struct ft
 
 /*Thread function that takes in arg struct with filename,
  * start_index, and end_index to read in thread in segments*/
-void *readFile(void *arg)
+void readFile(void arg)
 {
 	struct ft* fi = (struct ft*)arg;
 	string filename = fi->file.getFilename();
@@ -50,7 +50,7 @@ void *readFile(void *arg)
 
 //newFile
 //pthread function to create new file with encrypted data
-void *newFile(void *arg)
+void newFile(void arg)
 {
 	ofstream file;
 	struct ft* fi = (struct ft*)arg;
