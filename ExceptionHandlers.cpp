@@ -6,8 +6,6 @@
 #include <stdexcept>
 #include <string>
 
-using namespace std;
-
 class command_line_error : public runtime_error
 {
 	public:
