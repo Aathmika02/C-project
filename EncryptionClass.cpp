@@ -6,7 +6,7 @@
 #include<vector>
 #include<string>
 #include "ExceptionHandlers.cpp"
-#define const 10
+const int const int myConstant = 10; 
 
 // Create a typecast to use the non-static virtual functions in a thread
 using void * (*thread_function)(void *);
