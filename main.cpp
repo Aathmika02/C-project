@@ -15,7 +15,7 @@
 
 using namespace std;
 
-#define NUM_THREADS 1 //number of threads
+const NUM_THREADS 1 //number of threads
 
 //struct for passing to reading file. Contains filevector that has all the strings and file pointer 
 struct ft
