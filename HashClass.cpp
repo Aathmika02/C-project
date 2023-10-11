@@ -24,7 +24,7 @@ class hashing
 				password = entered_password;
 			}
 
-			int get_hash_key()
+			int get_hash_key() const;
 			{
 				return hash_key;
 			}
