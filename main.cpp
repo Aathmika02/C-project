@@ -57,7 +57,7 @@ void newFile(void arg)
 
 	file.open("NewFile.txt");
 	ostream_iterator<string> output_iterator(file, "\n");
-	copy(fi->fileVector.begin(), fi->fileVector.end(), output_iterator);
+	std::ranges::copy(fi->fileVector.begin(), fi->fileVector.end(), output_iterator);
 
 	return nullptr;
 }
